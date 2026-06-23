@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Programlarımız - BEK Eğitim Akademi{% endblock %}
+
+{% block content %}
+    <!-- Sayfa Başlığı -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-bek-dark mb-6 tracking-tight">Akademik <span class="text-bek-gold">Programlarımız</span></h1>
+        <p class="text-lg text-gray-600 leading-relaxed">
+            BEK Eğitim Akademi'de her kademeye ve hedefe uygun, bireyselleştirilmiş programlarla başarıyı şansa bırakmıyoruz.
+        </p>
+    </div>
+
+    <!-- Modern Accordion Yapısı -->
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10">
+        
+        <!-- 1. Program: LGS - YKS -->
+        <details class="group border-b border-gray-200 py-6 [&_summary::-webkit-details-marker]:hidden" open>
+            <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+                <h2 class="text-2xl font-bold text-bek-dark group-hover:text-bek-gold transition-colors">LGS ve YKS Sınav Grubu VIP Eğitim</h2>
+                <span class="ml-1.5 flex-shrink-0 bg-gray-50 rounded-full p-3 text-gray-500 group-open:bg-bek-gold group-open:text-white transition-all duration-300">
+                    <svg class="h-6 w-6 transform group-open:-rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </span>
+            </summary>
+            <div class="mt-6 text-gray-600 leading-relaxed pl-2 border-l-2 border-bek-gold">
+                <p class="mb-4">Türkiye'nin en rekabetçi sınavları olan LGS ve YKS'de, kalabalıktan uzak VIP gruplarımızla fark yaratıyoruz. Öğrencilerimiz, standart bir müfredatın ötesine geçerek kendi hızlarında ve eksiklerine odaklanan bir sistemde eğitim alırlar.</p>
+                <ul class="list-disc list-inside space-y-2 text-sm md:text-base">
+                    <li>Kişiye özel haftalık çalışma ve deneme programları.</li>
+                    <li>Soru çözüm saatlerinde birebir anında dönüt sistemi.</li>
+                    <li>Sınav kaygısı ve stres yönetimi üzerine profesyonel seanslar.</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- 2. Program: Ara Sınıflar -->
+        <details class="group border-b border-gray-200 py-6 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+                <h2 class="text-2xl font-bold text-bek-dark group-hover:text-bek-gold transition-colors">Ara Sınıf Kademelerinde VIP Eğitim</h2>
+                <span class="ml-1.5 flex-shrink-0 bg-gray-50 rounded-full p-3 text-gray-500 group-open:bg-bek-gold group-open:text-white transition-all duration-300">
+                    <svg class="h-6 w-6 transform group-open:-rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </span>
+            </summary>
+            <div class="mt-6 text-gray-600 leading-relaxed pl-2 border-l-2 border-bek-gold">
+                <p class="mb-4">Başarı, son yıla sığdırılamayacak kadar değerli bir yolculuktur. Ara sınıflarda oluşturduğumuz güçlü temel, öğrencilerin ileriki yıllarda sınav stresi yaşamasını engeller.</p>
+                <ul class="list-disc list-inside space-y-2 text-sm md:text-base">
+                    <li>Okul derslerine takviye ve not ortalamasını yükseltme garantisi.</li>
+                    <li>Temel matematik ve okuduğunu anlama (paragraf) becerilerinin geliştirilmesi.</li>
+                    <li>Öğrencinin ilgi ve yeteneklerinin erken dönemde keşfedilmesi.</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- 3. Program: Olimpiyatlar -->
+        <details class="group py-6 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+                <h2 class="text-2xl font-bold text-bek-dark group-hover:text-bek-gold transition-colors">TÜBİTAK, BİLSEM ve Kanguru Hazırlıkları</h2>
+                <span class="ml-1.5 flex-shrink-0 bg-gray-50 rounded-full p-3 text-gray-500 group-open:bg-bek-gold group-open:text-white transition-all duration-300">
+                    <svg class="h-6 w-6 transform group-open:-rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </span>
+            </summary>
+            <div class="mt-6 text-gray-600 leading-relaxed pl-2 border-l-2 border-bek-gold">
+                <p class="mb-4">Üstün yetenekli ve potansiyeli yüksek öğrencilerimiz için ulusal ve uluslararası arenada rekabet edebilecekleri vizyoner bir eğitim sunuyoruz.</p>
+                <ul class="list-disc list-inside space-y-2 text-sm md:text-base">
+                    <li>TÜBİTAK Matematik ve Bilim Olimpiyatları için ileri düzey analitik düşünme eğitimleri.</li>
+                    <li>BİLSEM (Bilim ve Sanat Merkezleri) yetenek tarama testlerine özel simülasyonlar.</li>
+                    <li>Kanguru ve URFODU gibi uluslararası matematik/bilim yarışmalarına yönelik stratejik çözüm kampları.</li>
+                </ul>
+            </div>
+        </details>
+
+    </div>
+
+    <!-- Harekete Geçirici Mesaj (Call to Action) -->
+    <div class="text-center mt-16">
+        <p class="text-gray-600 mb-6">Öğrencinize en uygun programı belirlemek için bizimle iletişime geçin.</p>
+        <a href="/iletisim" class="inline-block bg-bek-dark text-white font-semibold px-8 py-3 rounded-full shadow hover:bg-bek-gold transition-colors duration-300">Ücretsiz Danışmanlık Alın</a>
+    </div>
+{% endblock %}

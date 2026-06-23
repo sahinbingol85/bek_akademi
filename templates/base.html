@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %}BEK Eğitim Akademi - Bireyselleştirilmiş Eğitim Koçluğu{% endblock %}</title>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'bek-bg': '#FBF7F0',    // Logonun arka planındaki özel krem tonu
+                'bek-dark': '#2D3436',  // Ana metin rengi
+                'bek-gold': '#E69530',  // Logodaki canlı altın rengi
+              },
+              fontFamily: {
+                'sans': ['Inter', 'sans-serif'], // Modern, temiz bir yazı tipi
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-bek-bg text-bek-dark font-sans antialiased">
+
+    <header class="bg-white border-b-2 border-bek-gold shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3">
+                <img src="{{ url_for('static', path='/images/logo.png') }}" alt="BEK Logo" class="h-16 w-auto">
+                <span class="text-3xl font-bold text-bek-dark tracking-tight">
+                    <span class="text-bek-gold">BEK</span> Eğitim Akademi
+                </span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="/" class="text-bek-dark hover:text-bek-gold transition">Ana Sayfa</a>
+                <a href="/hakkimizda" class="text-bek-dark hover:text-bek-gold transition">Felsefemiz</a>
+                <a href="/programlar" class="text-bek-dark hover:text-bek-gold transition">Programlarımız</a>
+                <a href="/iletisim" class="bg-bek-gold text-white px-6 py-2.5 rounded-full hover:bg-bek-dark transition">İletişim</a>
+            </div>
+            
+            <div class="md:hidden">
+                <button class="text-bek-dark focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-16">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-bek-dark text-gray-200 mt-16 py-12 border-t border-gray-700">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-2xl font-bold text-white mb-4"><span class="text-bek-gold">BEK</span> Eğitim Akademi</p>
+            <p class="mb-6 max-w-xl mx-auto">Yeni Nesil Eğitim | LGS - YKS VIP Eğitim & Olimpiyat Hazırlıkları</p>
+            <p class="text-sm text-gray-500">© 2026 BEK Eğitim Akademi. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

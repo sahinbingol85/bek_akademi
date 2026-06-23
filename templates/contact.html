@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}İletişim - BEK Eğitim Akademi{% endblock %}
+
+{% block content %}
+    <!-- Başlık Bölümü -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+        <h1 class="text-4xl md:text-5xl font-light text-bek-dark mb-4 tracking-tight">Bizimle <span class="font-bold text-bek-gold">İletişime</span> Geçin</h1>
+        <p class="text-gray-500 font-light text-lg">Öğrencinizin geleceğini birlikte planlamak için ön başvuru formunu doldurabilir veya Maidan'daki ofisimizi ziyaret edebilirsiniz.</p>
+    </div>
+
+    <!-- İletişim İçeriği -->
+    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden">
+        <div class="grid md:grid-cols-2">
+            
+            <!-- Sol Taraf: Form -->
+            <div class="p-10 md:p-12">
+                <h2 class="text-2xl font-bold text-bek-dark mb-8">Ön Başvuru Formu</h2>
+                
+                {% if success %}
+                <div class="bg-green-50 border-l-4 border-green-500 p-4 mb-6 rounded">
+                    <p class="text-green-700 font-medium">Talebiniz başarıyla alındı! En kısa sürede sizinle iletişime geçeceğiz.</p>
+                </div>
+                {% endif %}
+
+                <form action="/iletisim" method="POST" class="space-y-6">
+                    <div>
+                        <label for="ad_soyad" class="block text-sm font-medium text-gray-700 mb-1">Ad Soyad</label>
+                        <input type="text" id="ad_soyad" name="ad_soyad" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-bek-gold outline-none transition-all">
+                    </div>
+                    
+                    <div>
+                        <label for="telefon" class="block text-sm font-medium text-gray-700 mb-1">Telefon Numarası</label>
+                        <input type="tel" id="telefon" name="telefon" required placeholder="05XX XXX XX XX" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-bek-gold outline-none transition-all">
+                    </div>
+                    
+                    <div>
+                        <label for="program" class="block text-sm font-medium text-gray-700 mb-1">İlgilendiğiniz Program</label>
+                        <select id="program" name="program" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-bek-gold outline-none bg-white transition-all">
+                            <option value="">Lütfen seçiniz...</option>
+                            <option value="LGS">LGS Sınav Grubu</option>
+                            <option value="YKS">YKS Sınav Grubu</option>
+                            <option value="Ara Sinif">Ara Sınıf VIP Eğitim</option>
+                            <option value="Olimpiyat">Olimpiyat (TÜBİTAK/BİLSEM)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-bek-dark text-white font-semibold py-4 rounded-xl shadow-lg hover:bg-bek-gold transition-all duration-300 transform hover:-translate-y-1">Formu Gönder</button>
+                </form>
+            </div>
+
+            <!-- Sağ Taraf: Kurum Bilgileri ve Harita -->
+            <div class="bg-gray-50 p-10 md:p-12 border-l border-gray-100 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-bek-dark mb-8">İletişim Bilgileri</h3>
+                    
+                    <div class="space-y-6 text-gray-600 font-light">
+                        <!-- İletişim Bilgileri -->
+                        <div class="flex items-start">
+                            <span class="text-2xl mr-4">📍</span>
+                            <p>Maidan AVM, Mustafa Kemal Mah. 2118. Cad. No: 4, C Blok 64. Ofis, Çankaya/Ankara</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-4">📱</span>
+                            <p>0507 600 58 15</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-4">✉️</span>
+                            <p>iletisim@bekakademi.com</p>
+                        </div>
+
+                        <!-- Sosyal Medya ve WhatsApp -->
+                        <div class="pt-6 border-t border-gray-200 flex gap-4">
+                            <a href="https://wa.me/905076005815" target="_blank" class="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+                                <span>💬</span> WhatsApp
+                            </a>
+                            <a href="https://www.instagram.com/bekegitimakademi" target="_blank" class="flex items-center gap-2 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:opacity-90 transition">
+                                <span>📸</span> Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Haritalar -->
+                <div class="mt-10 w-full h-64 rounded-2xl overflow-hidden shadow-inner border-4 border-white">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.038448509873!2d32.79326237666288!3d39.91490217152011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f005d5b77c5%3A0x679469e3243f75d5!2sMaidan!5e0!3m2!1str!2str!4v1688661234567" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

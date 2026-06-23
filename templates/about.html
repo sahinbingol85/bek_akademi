@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Felsefemiz - BEK Eğitim Akademi{% endblock %}
+
+{% block content %}
+    <div class="text-center max-w-3xl mx-auto mb-16">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-bek-dark mb-6 tracking-tight">Eğitimde <span class="text-bek-gold">Yeni Nesil</span> Bir Felsefe</h1>
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+            Her öğrencinin öğrenme serüveni parmak izi kadar benzersizdir. BEK Eğitim Akademi olarak, geleneksel ve tek tip eğitim anlayışını geride bırakıyor; akademik başarıyı analitik ve bireyselleştirilmiş bir sanat eseri gibi işliyoruz.
+        </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 mb-20">
+        <div class="bg-white p-10 rounded-2xl shadow-lg border-t-4 border-bek-gold hover:shadow-xl transition-shadow duration-300">
+            <div class="w-14 h-14 bg-bek-dark rounded-full flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-bek-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            </div>
+            <h2 class="text-2xl font-bold text-bek-dark mb-4">Bireyselleştirilmiş Eğitim Koçluğu</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Öğrencilerimizi sadece bir sınav adayı olarak değil, çok yönlü bireyler olarak görüyoruz. Uzman koçlarımız, her öğrencinin akademik altyapısını, stres yönetimi becerilerini ve algı düzeyini analiz ederek onlara özel bir yol haritası çizer.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Ezberci yaklaşımlar yerine, öğrenmeyi öğrenme stratejileri geliştiriyor; zaman yönetimi, odaklanma ve motivasyon konularında profesyonel mentörlük sağlıyoruz.
+            </p>
+        </div>
+
+        <div class="bg-bek-dark p-10 rounded-2xl shadow-lg text-white hover:shadow-xl transition-shadow duration-300">
+            <div class="w-14 h-14 bg-bek-gold rounded-full flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-bek-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+            </div>
+            <h2 class="text-2xl font-bold mb-4">Veri Odaklı Akademik Takip</h2>
+            <p class="text-gray-300 leading-relaxed mb-4">
+                "Yeni Nesil Eğitim" mottomuzun temelinde ölçülebilirlik yatar. Öğrencilerimizin katıldığı her deneme sınavı, çözdüğü her soru bankası analitik süzgeçlerden geçirilir.
+            </p>
+            <p class="text-gray-300 leading-relaxed">
+                Başarıyı şansa bırakmıyoruz. Gelişim grafikleri ve konu eksiklikleri detaylı olarak raporlanır; nokta atışı telafi çalışmalarıyla zaman kaybı önlenir. Velilerimiz, sürecin her aşamasında şeffaf ve somut verilerle bilgilendirilir.
+            </p>
+        </div>
+    </div>
+
+    <div class="bg-gray-50 rounded-3xl p-10 md:p-16 border border-gray-100">
+        <h2 class="text-3xl font-bold text-center text-bek-dark mb-12">Neden <span class="text-bek-gold">BEK</span> Akademi?</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+                <h3 class="text-xl font-bold text-bek-dark mb-3">VIP Kontenjanlar</h3>
+                <p class="text-gray-600">Sınırlı sayıda öğrenciyle, kalabalıktan uzak, butik ve yüksek odaklı çalışma ortamı sunuyoruz.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-bek-dark mb-3">Olimpiyat Altyapısı</h3>
+                <p class="text-gray-600">TÜBİTAK, BİLSEM ve Kanguru gibi platformlar için üst düzey analitik düşünme becerileri kazandırıyoruz.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-bek-dark mb-3">Güçlü Kadro</h3>
+                <p class="text-gray-600">Alanında uzman, yeni nesil soru tiplerine ve modern sınav sistemlerine hakim dinamik eğitimcilerle çalışıyoruz.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
