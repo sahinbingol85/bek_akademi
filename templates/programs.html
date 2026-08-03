@@ -1,84 +1,83 @@
 {% extends "base.html" %}
 
-{% block title %}Programlarımız - BEK Eğitim Akademi{% endblock %}
+{% block title %}Hizmetlerimiz - BEK Eğitim Akademi{% endblock %}
 
 {% block content %}
-    <!-- Sayfa Başlığı -->
     <div class="text-center max-w-3xl mx-auto mb-16">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-bek-dark mb-6 tracking-tight">Akademik <span class="text-bek-gold">Programlarımız</span></h1>
-        <p class="text-lg text-gray-600 leading-relaxed">
-            BEK Eğitim Akademi'de her kademeye ve hedefe uygun, bireyselleştirilmiş programlarla başarıyı şansa bırakmıyoruz.
-        </p>
+        <h1 class="text-4xl md:text-5xl font-light text-bek-dark mb-4 tracking-tight">Verdiğimiz <span class="font-bold text-bek-gold">Hizmetler</span></h1>
+        <p class="text-gray-500 font-light text-lg">Sınırlı kontenjan ile nitelikli eğitim prensibiyle, her yaş grubuna özel yapılandırılmış programlar sunuyoruz.</p>
     </div>
 
-    <!-- Modern Accordion Yapısı -->
-    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10">
+    <!-- Hizmetler Grid -->
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         
-        <!-- 1. Program: LGS - YKS -->
-        <details class="group border-b border-gray-200 py-6 [&_summary::-webkit-details-marker]:hidden" open>
-            <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
-                <h2 class="text-2xl font-bold text-bek-dark group-hover:text-bek-gold transition-colors">LGS ve YKS Sınav Grubu VIP Eğitim</h2>
-                <span class="ml-1.5 flex-shrink-0 bg-gray-50 rounded-full p-3 text-gray-500 group-open:bg-bek-gold group-open:text-white transition-all duration-300">
-                    <svg class="h-6 w-6 transform group-open:-rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </span>
-            </summary>
-            <div class="mt-6 text-gray-600 leading-relaxed pl-2 border-l-2 border-bek-gold">
-                <p class="mb-4">Türkiye'nin en rekabetçi sınavları olan LGS ve YKS'de, kalabalıktan uzak VIP gruplarımızla fark yaratıyoruz. Öğrencilerimiz, standart bir müfredatın ötesine geçerek kendi hızlarında ve eksiklerine odaklanan bir sistemde eğitim alırlar.</p>
-                <ul class="list-disc list-inside space-y-2 text-sm md:text-base">
-                    <li>Kişiye özel haftalık çalışma ve deneme programları.</li>
-                    <li>Soru çözüm saatlerinde birebir anında dönüt sistemi.</li>
-                    <li>Sınav kaygısı ve stres yönetimi üzerine profesyonel seanslar.</li>
+        <!-- Lise Bölümü -->
+        <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+            <h2 class="text-2xl font-bold text-bek-dark mb-2">LİSE</h2>
+            <p class="text-bek-gold font-medium mb-6">(9-10-11-12 - Mezun)</p>
+            <ul class="space-y-3 text-gray-600">
+                <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> TYT - AYT Hazırlık</li>
+                <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> Ders Takibi</li>
+                <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> Sınav Koçluğu</li>
+                <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> Etüt Programları</li>
+            </ul>
+        </div>
+
+        <!-- Ortaokul Bölümü -->
+        <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+            <h2 class="text-2xl font-bold text-bek-dark mb-2">ORTAOKUL</h2>
+            <p class="text-bek-gold font-medium mb-6">(5-6-7-8)</p>
+            <ul class="space-y-3 text-gray-600">
+                <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> LGS Hazırlık & Okul Derslerine Destek</li>
+                <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> Fen Bilimleri & Matematik</li>
+                <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> Türkçe & Sosyal Bilgiler & İngilizce</li>
+            </ul>
+        </div>
+
+        <!-- Eğitim Koçluğu -->
+        <div class="bg-bek-dark text-white p-8 rounded-3xl shadow-lg md:col-span-2">
+            <h2 class="text-2xl font-bold text-bek-gold mb-6">EĞİTİM KOÇLUĞU</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> Haftalık hedef belirleme</li>
+                    <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> Günlük çalışma planı ve değerlendirme</li>
+                    <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> Motivasyon çalışmaları</li>
+                </ul>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> Deneme analizi</li>
+                    <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> Eksik konu planlaması</li>
+                    <li class="flex items-center gap-2"><span class="text-bek-gold">✓</span> Haftalık veli bilgilendirmesi</li>
                 </ul>
             </div>
-        </details>
+        </div>
 
-        <!-- 2. Program: Ara Sınıflar -->
-        <details class="group border-b border-gray-200 py-6 [&_summary::-webkit-details-marker]:hidden">
-            <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
-                <h2 class="text-2xl font-bold text-bek-dark group-hover:text-bek-gold transition-colors">Ara Sınıf Kademelerinde VIP Eğitim</h2>
-                <span class="ml-1.5 flex-shrink-0 bg-gray-50 rounded-full p-3 text-gray-500 group-open:bg-bek-gold group-open:text-white transition-all duration-300">
-                    <svg class="h-6 w-6 transform group-open:-rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </span>
-            </summary>
-            <div class="mt-6 text-gray-600 leading-relaxed pl-2 border-l-2 border-bek-gold">
-                <p class="mb-4">Başarı, son yıla sığdırılamayacak kadar değerli bir yolculuktur. Ara sınıflarda oluşturduğumuz güçlü temel, öğrencilerin ileriki yıllarda sınav stresi yaşamasını engeller.</p>
-                <ul class="list-disc list-inside space-y-2 text-sm md:text-base">
-                    <li>Okul derslerine takviye ve not ortalamasını yükseltme garantisi.</li>
-                    <li>Temel matematik ve okuduğunu anlama (paragraf) becerilerinin geliştirilmesi.</li>
-                    <li>Öğrencinin ilgi ve yeteneklerinin erken dönemde keşfedilmesi.</li>
-                </ul>
+        <!-- Özel Programlar (Yarışmalar & İlkokul) -->
+        <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+            <h2 class="text-xl font-bold text-bek-dark mb-4">Ulusal ve Uluslararası Yarışmalar</h2>
+            <p class="text-gray-600 mb-6">TÜBİTAK, TEKNOFEST, Matematik Olimpiyatları, Bilim Olimpiyatları, URFODU, Kanguru ve daha fazlası için rehberlik ve hazırlık desteği.</p>
+            
+            <h2 class="text-xl font-bold text-bek-dark mb-4 pt-6 border-t border-gray-100">İlkokul Ödev Kulüpleri</h2>
+            <p class="text-gray-600">Düzenli ödev takibi, pekiştirme etkinlikleri ve sorumluluk bilinci kazandıran çalışma ortamı.</p>
+        </div>
+
+        <!-- Yaz Okulu & Deneme Kulübü -->
+        <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col justify-between">
+            <div>
+                <h2 class="text-xl font-bold text-bek-dark mb-4">Deneme Kulübü</h2>
+                <p class="text-gray-600 mb-6">Düzenli deneme takibi, sonuç analizi ve hedef odaklı gelişim desteği.</p>
             </div>
-        </details>
-
-        <!-- 3. Program: Olimpiyatlar -->
-        <details class="group py-6 [&_summary::-webkit-details-marker]:hidden">
-            <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
-                <h2 class="text-2xl font-bold text-bek-dark group-hover:text-bek-gold transition-colors">TÜBİTAK, BİLSEM ve Kanguru Hazırlıkları</h2>
-                <span class="ml-1.5 flex-shrink-0 bg-gray-50 rounded-full p-3 text-gray-500 group-open:bg-bek-gold group-open:text-white transition-all duration-300">
-                    <svg class="h-6 w-6 transform group-open:-rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </span>
-            </summary>
-            <div class="mt-6 text-gray-600 leading-relaxed pl-2 border-l-2 border-bek-gold">
-                <p class="mb-4">Üstün yetenekli ve potansiyeli yüksek öğrencilerimiz için ulusal ve uluslararası arenada rekabet edebilecekleri vizyoner bir eğitim sunuyoruz.</p>
-                <ul class="list-disc list-inside space-y-2 text-sm md:text-base">
-                    <li>TÜBİTAK Matematik ve Bilim Olimpiyatları için ileri düzey analitik düşünme eğitimleri.</li>
-                    <li>BİLSEM (Bilim ve Sanat Merkezleri) yetenek tarama testlerine özel simülasyonlar.</li>
-                    <li>Kanguru ve URFODU gibi uluslararası matematik/bilim yarışmalarına yönelik stratejik çözüm kampları.</li>
-                </ul>
+            
+            <div class="pt-6 border-t border-gray-100">
+                <h2 class="text-xl font-bold text-bek-dark mb-4">Yaz Okulu Atölyeleri</h2>
+                <p class="text-gray-600 mb-4">Yaratıcı, eğlenceli ve öğretici atölyelerle yaz tatilini verimli geçiriyoruz:</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-bek-bg text-bek-dark px-3 py-1 rounded-full text-sm font-medium">Bilişim Kodlama</span>
+                    <span class="bg-bek-bg text-bek-dark px-3 py-1 rounded-full text-sm font-medium">Resim & Sanat</span>
+                    <span class="bg-bek-bg text-bek-dark px-3 py-1 rounded-full text-sm font-medium">Hızlı Okuma</span>
+                    <span class="bg-bek-bg text-bek-dark px-3 py-1 rounded-full text-sm font-medium">Tenis Kulübü</span>
+                    <span class="bg-bek-bg text-bek-dark px-3 py-1 rounded-full text-sm font-medium">At Binicilik</span>
+                </div>
             </div>
-        </details>
-
-    </div>
-
-    <!-- Harekete Geçirici Mesaj (Call to Action) -->
-    <div class="text-center mt-16">
-        <p class="text-gray-600 mb-6">Öğrencinize en uygun programı belirlemek için bizimle iletişime geçin.</p>
-        <a href="/iletisim" class="inline-block bg-bek-dark text-white font-semibold px-8 py-3 rounded-full shadow hover:bg-bek-gold transition-colors duration-300">Ücretsiz Danışmanlık Alın</a>
+        </div>
     </div>
 {% endblock %}
