@@ -33,7 +33,58 @@
                 </span>
             </a>
             
+            <!-- Bilgisayar (Masaüstü) Menüsü -->
             <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="/" class="text-bek-dark hover:text-bek-gold transition">Ana Sayfa</a>
+                <a href="/hakkimizda" class="text-bek-dark hover:text-bek-gold transition">Felsefemiz</a>
+                <a href="/programlar" class="text-bek-dark hover:text-bek-gold transition">Programlarımız</a>
+                <a href="/iletisim" class="bg-bek-gold text-white px-6 py-2.5 rounded-full hover:bg-bek-dark transition">İletişim</a>
+            </div>
+            
+            <!-- Mobil (Telefon) Menü Butonu -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-bek-dark focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobil Menü İçeriği (Yeni Eklendi) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-4 shadow-lg">
+            <a href="/" class="block text-bek-dark font-medium hover:text-bek-gold transition">Ana Sayfa</a>
+            <a href="/hakkimizda" class="block text-bek-dark font-medium hover:text-bek-gold transition">Felsefemiz</a>
+            <a href="/programlar" class="block text-bek-dark font-medium hover:text-bek-gold transition">Programlarımız</a>
+            <a href="/iletisim" class="block bg-bek-gold text-white px-4 py-2 rounded-full text-center hover:bg-bek-dark transition mt-2">İletişim</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-16">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-bek-dark text-gray-200 mt-16 py-12 border-t border-gray-700">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-2xl font-bold text-white mb-4"><span class="text-bek-gold">BEK</span> Eğitim Akademi</p>
+            <p class="mb-6 max-w-xl mx-auto">Yeni Nesil Eğitim | LGS - YKS VIP Eğitim & Olimpiyat Hazırlıkları</p>
+            <p class="text-sm text-gray-500">© 2026 BEK Eğitim Akademi. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Mobil Menüyü Çalıştıran JavaScript Kodu (Yeni Eklendi) -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
                 <a href="/" class="text-bek-dark hover:text-bek-gold transition">Ana Sayfa</a>
                 <a href="/hakkimizda" class="text-bek-dark hover:text-bek-gold transition">Felsefemiz</a>
                 <a href="/programlar" class="text-bek-dark hover:text-bek-gold transition">Programlarımız</a>
