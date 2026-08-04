@@ -22,6 +22,7 @@
     </section>
 
     <!-- Samimi Davet Bölümü -->
+    <!-- Samimi Davet Bölümü -->
     <section class="py-16">
         <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col md:flex-row">
             <div class="md:w-1/2 p-12 lg:p-16 flex flex-col justify-center bg-bek-bg">
@@ -40,8 +41,11 @@
                     </a>
                 </div>
             </div>
+            <!-- Görselin değiştiği kısım -->
             <div class="md:w-1/2 bg-gray-200">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop" alt="Danışmanlık" class="w-full h-full object-cover">
+                <img src="{{ url_for('static', path='/images/ofis_ortami.png') }}" 
+                     alt="BEK Eğitim Akademi Çalışma Ortamı" 
+                     class="w-full h-full object-cover">
             </div>
         </div>
     </section>
