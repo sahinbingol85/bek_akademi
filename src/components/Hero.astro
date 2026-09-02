@@ -1,0 +1,45 @@
+---
+// Hero.astro
+---
+<section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-bek-bg pt-20">
+    
+    <!-- Arka Plan Dekoratif Elementleri -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-32 -right-32 w-[30rem] h-[30rem] bg-bek-gold rounded-full mix-blend-multiply filter blur-[100px] opacity-20"></div>
+        <div class="absolute top-1/2 -left-32 w-[25rem] h-[25rem] bg-bek-dark rounded-full mix-blend-multiply filter blur-[100px] opacity-10"></div>
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+            
+            <!-- Üst Etiket (Vizyon Vurgusu) -->
+            <div class="inline-block mb-6 px-5 py-2 rounded-full border border-bek-gold/30 bg-bek-gold/10 text-bek-gold font-semibold text-sm tracking-widest uppercase shadow-sm">
+                Yeni Nesil Eğitim & VIP Koçluk
+            </div>
+            
+            <!-- Vurucu Ana Başlık -->
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-bek-dark tracking-tight mb-8 leading-tight">
+                Başarıyı Şansa Değil, <br class="hidden md:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-bek-gold to-yellow-600">Veriye Dayalı</span> Analize Bırakın
+            </h1>
+            
+            <!-- Alt Metin -->
+            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Sınırlı kontenjan, bireyselleştirilmiş eğitim koçluğu ve butik çalışma ortamı ile hedeflerinize giden yolda size özel bir strateji çiziyoruz.
+            </p>
+            
+            <!-- Aksiyon Butonları -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#iletisim" class="w-full sm:w-auto px-8 py-4 bg-bek-dark text-white rounded-full font-medium hover:bg-black transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center justify-center gap-2">
+                    Ücretsiz Görüşme Ayarla
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+                <a href="#hakkimizda" class="w-full sm:w-auto px-8 py-4 bg-white text-bek-dark border border-gray-200 rounded-full font-medium hover:border-bek-gold hover:text-bek-gold transition-all duration-300 shadow-sm hover:shadow-md">
+                    Felsefemizi Keşfedin
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</section>

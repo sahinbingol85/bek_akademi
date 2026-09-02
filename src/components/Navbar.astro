@@ -1,0 +1,20 @@
+---
+// Navbar.astro
+---
+<header class="bg-white border-b-2 border-bek-gold shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#hero" class="flex items-center gap-3">
+            <!-- Logo Buraya Eklendi -->
+            <img src="/images/logo.png" alt="BEK Logo" class="h-12 w-auto object-contain">
+            <span class="text-3xl font-bold text-bek-dark tracking-tight">
+                <span class="text-bek-gold">BEK</span> Akademi
+            </span>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-8 font-medium">
+            <a href="#hakkimizda" class="text-bek-dark hover:text-bek-gold transition">Felsefemiz</a>
+            <a href="#programlar" class="text-bek-dark hover:text-bek-gold transition">Programlar</a>
+            <a href="#iletisim" class="bg-bek-gold text-white px-6 py-2.5 rounded-full hover:bg-bek-dark transition">İletişim</a>
+        </div>
+    </nav>
+</header>

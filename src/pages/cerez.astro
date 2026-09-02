@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Çerez (Cookie) Politikası | BEK Eğitim Akademi">
+    <Navbar />
+    
+    <main class="pt-32 pb-24 bg-bek-bg min-h-screen">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white p-10 md:p-16 rounded-[2rem] shadow-sm border border-gray-100">
+                
+                <h1 class="text-3xl md:text-4xl font-bold text-bek-dark mb-8 border-b pb-6 border-gray-100">Çerez Politikası</h1>
+                
+                <div class="space-y-6 text-gray-600 leading-relaxed font-light">
+                    <p>
+                        <strong>BEK Eğitim Akademi</strong> web sitesi olarak, ziyaretçilerimize daha iyi, hızlı ve güvenli bir deneyim sunmak amacıyla çerez (cookie) kullanmaktayız. Bu sayfa, hangi çerezlerin kullanıldığını ve bunları nasıl yönetebileceğinizi açıklamaktadır.
+                    </p>
+
+                    <h2 class="text-xl font-bold text-bek-dark pt-4">1. Çerez (Cookie) Nedir?</h2>
+                    <p>
+                        Çerezler, bir web sitesini ziyaret ettiğinizde tarayıcınız aracılığıyla cihazınıza (bilgisayar, telefon, tablet) kaydedilen küçük metin dosyalarıdır. Çerezler, sitenin düzgün çalışmasını sağlar ve ziyaretçi tercihlerini hatırlayarak daha iyi bir kullanıcı deneyimi sunar.
+                    </p>
+
+                    <h2 class="text-xl font-bold text-bek-dark pt-4">2. Sitemizde Kullanılan Çerez Türleri</h2>
+                    <ul class="list-disc pl-6 space-y-2 mt-2">
+                        <li><strong>Zorunlu Çerezler:</strong> Web sitemizin temel fonksiyonlarının (örn. güvenli dolaşım, sayfa yükleme hızı) çalışması için kesinlikle gerekli olan çerezlerdir.</li>
+                        <li><strong>Performans ve Analiz Çerezleri:</strong> Sitemizin nasıl kullanıldığını analiz ederek geliştirmemize yardımcı olan, tamamen anonim veriler toplayan (sayfa ziyaret sayıları vb.) çerezlerdir.</li>
+                    </ul>
+
+                    <h2 class="text-xl font-bold text-bek-dark pt-4">3. Çerezlerin Yönetimi</h2>
+                    <p>
+                        Kullanıcılarımız, tarayıcılarının ayarlarını değiştirerek çerez kullanımını istedikleri zaman sınırlandırabilir veya tamamen engelleyebilirler. Ancak zorunlu çerezlerin kapatılması durumunda sitemizin bazı görsel ve işlevsel özellikleri tam olarak çalışmayabilir. Çerez ayarlarınızı kullandığınız tarayıcının (Chrome, Safari, Firefox vb.) "Ayarlar / Gizlilik" menüsünden yönetebilirsiniz.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</Layout>
