@@ -7,8 +7,22 @@ const { title } = Astro.props;
 <!-- HTML etiketine eklediğimiz scroll-smooth, menüye basınca kayarak inmeyi sağlar -->
 <html lang="tr" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Temel SEO Başlığı ve Açıklaması -->
+    <title>BEK Eğitim Akademi | Ankara VIP Eğitim, LGS ve YKS Hazırlık, Özel Ders</title>
+    <meta name="description" content="Ankara Çankaya Maidan'da VIP kontenjanlarla LGS, YKS, Olimpiyat hazırlığı ve özel ders. Veri odaklı akademik takip ile öğrencinizi başarıya taşıyın." />
+    <meta name="keywords" content="Ankara VIP eğitim, Ankara özel ders, Çankaya LGS hazırlık, YKS kursu Ankara, Maidan eğitim kurumu, matematik olimpiyat hazırlık, ortaokul etüt, lise üniversite hazırlık" />
+
+    <!-- Sosyal Medya (Open Graph) Etiketleri (WhatsApp/Instagram'da link paylaşınca çıkan şık görünüm için) -->
+    <meta property="og:title" content="BEK Eğitim Akademi | Ankara VIP Eğitim" />
+    <meta property="og:description" content="Sınırlı kontenjan ile veri odaklı VIP eğitim. Ankara Maidan'da LGS, YKS ve Olimpiyat hazırlığı." />
+    <meta property="og:image" content="/images/logo.png" />
+    <meta property="og:type" content="website" />
+    
     <title>{title}</title>
 </head>
 <body class="bg-bek-bg text-bek-dark font-sans antialiased">
