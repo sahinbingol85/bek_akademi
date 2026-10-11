@@ -4,7 +4,7 @@ import '../styles/global.css';
 // Eğer sayfadan (örneğin KVKK) özel bir başlık/açıklama gelmezse, bu varsayılan SEO değerlerini kullanır.
 const { 
     title = "BEK Eğitim Akademi | Ankara VIP Eğitim, LGS ve YKS Hazırlık, Özel Ders",
-    description = "Ankara Çankaya Maidan'da VIP kontenjanlarla LGS, YKS, Olimpiyat hazırlığı ve özel ders. Veri odaklı akademik takip ile öğrencinizi başarıya taşıyın."
+    description = "Ankara Çankaya Maidan'da VIP ve butik eğitim. Eğitim koçluğu, bireysel danışmanlık, deneme analizi, yeni nesil LGS - YKS kursu ve özel ders ile başarıyı garantileyin."
 } = Astro.props;
 ---
 
@@ -19,7 +19,7 @@ const {
     <!-- Dinamik SEO Başlığı ve Açıklaması -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="Ankara VIP eğitim, Ankara özel ders, Çankaya LGS hazırlık, YKS kursu Ankara, Maidan eğitim kurumu, matematik olimpiyat hazırlık, ortaokul etüt, lise üniversite hazırlık" />
+    <meta name="keywords" content="Özel ders, Türkçe, Mat, Fen, YKS, LGS, VIP eğitim, Butik eğitim, Yeni nesil kurs, LGS kursu, YKS kursu, Eğitim koçluğu, Eğitim danışmanlığı, Bireysel eğitim, Bireysel koçluk, Deneme kulübü, Deneme analizi, Maidan, Tepe Prime, Mahall Ankara, Doktorlar, Bilkent, ODTÜ, Mustafa Kemal Mahallesi, Çukurambar" />
 
     <!-- Sosyal Medya (Open Graph) Etiketleri -->
     <meta property="og:title" content={title} />
