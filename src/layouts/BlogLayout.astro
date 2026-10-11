@@ -1,0 +1,38 @@
+---
+// src/layouts/BlogLayout.astro
+import Layout from './Layout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={`${frontmatter.title} | BEK Akademi Eğitim Rehberi`} description={frontmatter.description}>
+    <main class="bg-bek-bg min-h-screen py-24">
+        <article class="container mx-auto px-6 max-w-3xl">
+            <!-- Geri Dön Butonu -->
+            <a href="/blog" class="inline-flex items-center text-bek-gold hover:text-bek-dark transition-colors mb-8 font-medium">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Rehbere Dön
+            </a>
+
+            <!-- Yazı Başlığı ve Bilgileri -->
+            <header class="mb-12 border-b border-gray-200 pb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-bek-dark mb-4 leading-tight">
+                    {frontmatter.title}
+                </h1>
+                <div class="flex items-center text-gray-500 text-sm">
+                    <span class="font-medium text-bek-gold">{frontmatter.author}</span>
+                    <span class="mx-2">•</span>
+                    <time>{frontmatter.date}</time>
+                </div>
+            </header>
+
+            <!-- Markdown İçeriği (Yazının Kendisi) -->
+            <div class="prose prose-lg prose-gray max-w-none 
+                        prose-headings:text-bek-dark prose-headings:font-bold 
+                        prose-a:text-bek-gold hover:prose-a:text-bek-dark transition-colors
+                        prose-p:text-gray-600 prose-p:leading-relaxed">
+                <slot />
+            </div>
+        </article>
+    </main>
+</Layout>
