@@ -4,7 +4,7 @@
 <header class="bg-white border-b-2 border-bek-gold shadow-sm sticky top-0 z-50">
     <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
         
-        <!-- Logo / İsim (Artık doğrudan ana sayfaya yönlendirir) -->
+        <!-- Logo / İsim -->
         <a href="/" class="flex items-center gap-3 relative z-20">
             <img src="/images/logo.png" alt="BEK Logo" class="h-12 w-auto object-contain">
             <span class="text-3xl font-bold text-bek-dark tracking-tight">
@@ -12,10 +12,12 @@
             </span>
         </a>
         
-        <!-- MASAÜSTÜ MENÜ (Başına / eklendi) -->
+        <!-- MASAÜSTÜ MENÜ -->
         <div class="hidden md:flex items-center space-x-8 font-medium">
             <a href="/#hakkimizda" class="text-bek-dark hover:text-bek-gold transition">Felsefemiz</a>
             <a href="/#programlar" class="text-bek-dark hover:text-bek-gold transition">Programlar</a>
+            <!-- YENİ EKLENEN BLOG LİNKİ (MASAÜSTÜ) -->
+            <a href="/blog" class="text-bek-dark hover:text-bek-gold transition">Eğitim Rehberi</a>
             <a href="/#iletisim" class="bg-bek-gold text-white px-6 py-2.5 rounded-full hover:bg-bek-dark transition shadow-sm">İletişim</a>
         </div>
 
@@ -28,10 +30,12 @@
         
     </nav>
 
-    <!-- MOBİL MENÜ İÇERİĞİ (Başına / eklendi) -->
+    <!-- MOBİL MENÜ İÇERİĞİ -->
     <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-sm z-10 flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-all duration-300 md:hidden">
         <a href="/#hakkimizda" class="mobile-link text-2xl font-medium text-bek-dark hover:text-bek-gold transition">Felsefemiz</a>
         <a href="/#programlar" class="mobile-link text-2xl font-medium text-bek-dark hover:text-bek-gold transition">Programlar</a>
+        <!-- YENİ EKLENEN BLOG LİNKİ (MOBİL) -->
+        <a href="/blog" class="mobile-link text-2xl font-medium text-bek-dark hover:text-bek-gold transition">Eğitim Rehberi</a>
         <a href="/#iletisim" class="mobile-link text-2xl font-medium text-white bg-bek-gold px-8 py-3 rounded-full shadow-md hover:bg-bek-dark transition">İletişim</a>
     </div>
 </header>
