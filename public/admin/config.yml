@@ -2,8 +2,7 @@ backend:
   name: github
   repo: sahinbingol85/bek_akademi
   branch: main
-  auth_type: pkce
-  app_id: Ov23lieKgfgqkqjTi95I
+  base_url: https://bek-cms-auth.vercel.app  # Kendi Vercel köprü linkini yaz
 
 locale: 'tr'
 media_folder: "public/images/blog"
