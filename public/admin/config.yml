@@ -1,4 +1,3 @@
-# public/admin/config.yml
 backend:
   name: github
   repo: sahinbingol85/bek_akademi
@@ -6,20 +5,17 @@ backend:
   auth_type: implicit
   app_id: Ov23lieKgfgqkqjTi95I
 
-
-# Paneldeki dil Türkçe olsun
 locale: 'tr'
 
-# Medya (Fotoğraf) Klasörü Ayarları
-media_folder: "public/images/blog" # Fotoğrafların kaydedileceği yer
-public_folder: "/images/blog"      # Sitede fotoğrafların okunacağı link
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
 
 collections:
   - name: "blog"
     label: "Eğitim Rehberi (Blog)"
     label_singular: "Yazı"
-    folder: "src/pages/blog"       # md dosyalarının kaydedileceği klasör
-    create: true                   # Yeni yazı eklemeye izin ver
+    folder: "src/pages/blog"
+    create: true
     slug: "{{slug}}"
     fields:
       - { label: "Tasarım (Gizli)", name: "layout", widget: "hidden", default: "../../layouts/BlogLayout.astro" }
