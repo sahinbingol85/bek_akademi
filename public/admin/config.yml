@@ -3,6 +3,9 @@ backend:
   repo: sahinbingol85/bek_akademi
   branch: main
   app_id: Ov23lieKgfgqkqjTi95I
+  auth_type: pkce
+  base_url: https://github.com
+  auth_endpoint: login/oauth/authorize
 
 locale: 'tr'
 
