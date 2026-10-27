@@ -1,0 +1,31 @@
+# public/admin/config.yml
+backend:
+  name: github
+  repo: sahinbingol85/bek_akademi
+  branch: main
+  auth_type: implicit
+  app_id: Ov23lieKgfgqkqjTi95I
+
+
+# Paneldeki dil Türkçe olsun
+locale: 'tr'
+
+# Medya (Fotoğraf) Klasörü Ayarları
+media_folder: "public/images/blog" # Fotoğrafların kaydedileceği yer
+public_folder: "/images/blog"      # Sitede fotoğrafların okunacağı link
+
+collections:
+  - name: "blog"
+    label: "Eğitim Rehberi (Blog)"
+    label_singular: "Yazı"
+    folder: "src/pages/blog"       # md dosyalarının kaydedileceği klasör
+    create: true                   # Yeni yazı eklemeye izin ver
+    slug: "{{slug}}"
+    fields:
+      - { label: "Tasarım (Gizli)", name: "layout", widget: "hidden", default: "../../layouts/BlogLayout.astro" }
+      - { label: "Yazı Başlığı", name: "title", widget: "string" }
+      - { label: "Kısa Özet (Ana sayfada görünür)", name: "description", widget: "text" }
+      - { label: "Kategori", name: "category", widget: "string", default: "VİP REHBERLİK" }
+      - { label: "Yazar", name: "author", widget: "string", default: "BEK Akademi Uzman Kadrosu" }
+      - { label: "Yayın Tarihi", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Yazı İçeriği (Görsel ve Metin)", name: "body", widget: "markdown" }
