@@ -3,69 +3,157 @@
 import Layout from './Layout.astro';
 
 const { frontmatter } = Astro.props;
+
+// Tarihi şık bir Türkçe formata çeviriyoruz
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('tr-TR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+});
 ---
 
 <Layout title={`${frontmatter.title} | BEK Akademi Eğitim Rehberi`} description={frontmatter.description}>
-    <main class="bg-[#F8F9FA] min-h-screen pb-20">
+    <main class="bg-[#f4f5f7] min-h-screen pb-24 font-sans">
         
-        <!-- Üst Kısım (Hero) - Daraltıldı -->
-        <section class="bg-bek-dark pt-24 pb-20 relative overflow-hidden rounded-b-[2rem] md:rounded-b-[4rem] z-0 shadow-inner">
-            <div class="absolute inset-0 bg-bek-gold/5"></div>
-            <div class="absolute top-0 right-0 w-48 h-48 bg-bek-gold opacity-15 blur-2xl rounded-full"></div>
+        <!-- ÜST KISIM (HERO) -->
+        <section class="bg-gradient-to-br from-[#0f1115] via-[#2a2215] to-[#0f1115] pt-16 pb-20 relative overflow-hidden rounded-b-[2rem] md:rounded-b-[3rem] z-0 shadow-2xl border-b border-bek-gold/10">
             
-            <div class="container mx-auto px-6 max-w-4xl relative z-10 text-center">
-                <!-- Geri Dön Butonu -->
-                <a href="/blog" class="inline-flex items-center text-bek-gold hover:text-white transition-colors mb-6 font-semibold tracking-widest uppercase text-xs">
+            <!-- EĞİTİM & VERİ ANİMASYONU (Yol Haritası ve Veri Noktaları) -->
+            <div class="absolute inset-0 z-0 opacity-50 pointer-events-none mix-blend-screen">
+                <svg class="w-full h-full object-cover" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <!-- İlerleyiş / Yol Haritası Çizgileri -->
+                    <path d="M-100 250 C 200 150, 400 350, 700 200 S 1000 300, 1300 150" fill="none" stroke="#D4AF37" stroke-width="1.5" class="path-animate-1" stroke-linecap="round" />
+                    <path d="M-50 100 C 250 250, 450 50, 800 250 S 1100 50, 1400 150" fill="none" stroke="#ffffff" stroke-width="0.5" class="path-animate-2 opacity-30" stroke-linecap="round" />
+                    <path d="M0 350 C 300 200, 500 400, 900 150 S 1200 350, 1500 200" fill="none" stroke="#D4AF37" stroke-width="1" class="path-animate-3 opacity-50" stroke-linecap="round" />
+                    <!-- Parlayan Veri Noktaları -->
+                    <circle cx="200" cy="180" r="3" fill="#D4AF37" class="node-pulse-1" />
+                    <circle cx="700" cy="200" r="4" fill="#ffffff" class="node-pulse-2" />
+                    <circle cx="1000" cy="230" r="2.5" fill="#D4AF37" class="node-pulse-3" />
+                </svg>
+            </div>
+
+            <!-- İnce Grid (Izgara) Dokusu -->
+            <div class="absolute inset-0 opacity-10 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+            
+            <div class="container mx-auto px-6 max-w-5xl relative z-10">
+                <a href="/#egitim-rehberi" class="inline-flex items-center text-bek-gold/80 hover:text-bek-gold transition-colors mb-6 font-medium tracking-[0.2em] uppercase text-[10px]">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                    Rehbere Dön
+                    ANA SAYFAYA DÖN
                 </a>
                 
-                <!-- Yazı Başlığı -->
-                <h1 class="text-2xl md:text-4xl font-extrabold text-white mb-4 leading-tight tracking-tight">
-                    {frontmatter.title}
-                </h1>
-                
-                <!-- Yazar ve Tarih Bilgisi -->
-                <div class="flex items-center justify-center text-gray-400 text-xs font-light space-x-3">
-                    <span class="flex items-center font-medium text-gray-300">
-                        <svg class="w-3 h-3 mr-1 text-bek-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                        {frontmatter.author || 'BEK Akademi'}
-                    </span>
-                    <span class="text-gray-600">•</span>
-                    <span class="flex items-center">
-                        <svg class="w-3 h-3 mr-1 text-bek-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        {frontmatter.date}
-                    </span>
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                    <div class="md:w-3/4">
+                        <span class="inline-block border border-bek-gold/40 text-bek-gold font-bold tracking-[0.25em] uppercase text-[9px] px-3 py-1 mb-4 rounded-sm bg-bek-gold/5 backdrop-blur-sm shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+                            {frontmatter.category || 'VİP REHBERLİK'}
+                        </span>
+                        <h1 class="text-3xl md:text-4xl font-extrabold text-white leading-[1.2] tracking-tight mb-4 text-balance">
+                            {frontmatter.title}
+                        </h1>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed max-w-2xl border-l-2 border-bek-gold/50 pl-4">
+                            {frontmatter.description}
+                        </p>
+                    </div>
+
+                    <div class="md:w-1/4 flex flex-row md:flex-col gap-4 border-t md:border-t-0 md:border-l border-white/10 pt-4 md:pt-0 md:pl-5">
+                        <div>
+                            <span class="block text-white/40 text-[8px] uppercase tracking-[0.2em] mb-1">Yazar</span>
+                            <span class="block text-white text-[11px] font-medium">{frontmatter.author || 'BEK Akademi'}</span>
+                        </div>
+                        <div>
+                            <span class="block text-white/40 text-[8px] uppercase tracking-[0.2em] mb-1">Yayın Tarihi</span>
+                            <span class="block text-gray-300 text-[11px] font-light">{formattedDate}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Okuma Alanı (Aydınlık İçerik Kartı) -->
-        <article class="container mx-auto px-6 max-w-3xl -mt-12 relative z-20">
-            <div class="bg-white rounded-2xl shadow-lg shadow-gray-200/40 p-6 md:p-10 border border-gray-100">
+        <!-- DERGİ OKUMA ALANI -->
+        <article class="container mx-auto px-6 max-w-4xl -mt-8 relative z-20">
+            <div class="bg-white rounded-t-[2rem] rounded-b-xl shadow-xl shadow-bek-dark/5 p-8 md:p-12 lg:p-16 border border-gray-100 relative">
                 
-                <!-- Markdown'un Styllendiği Yer (Tailwind Typography) -->
-                <div class="prose prose-base md:prose-lg max-w-none 
-                            prose-headings:text-bek-dark prose-headings:font-bold prose-headings:tracking-tight
-                            prose-a:text-bek-gold hover:prose-a:text-bek-dark prose-a:no-underline prose-a:font-semibold transition-colors
-                            prose-p:text-gray-600 prose-p:leading-relaxed prose-p:font-light
-                            prose-blockquote:border-l-4 prose-blockquote:border-bek-gold prose-blockquote:bg-gray-50 prose-blockquote:p-4 prose-blockquote:italic prose-blockquote:text-gray-700 prose-blockquote:rounded-r-lg
-                            prose-li:text-gray-600 prose-li:font-light marker:text-bek-gold
-                            prose-strong:text-bek-dark prose-strong:font-semibold">
+                <div class="prose prose-lg max-w-none 
+                            
+                            /* GENEL METİN */
+                            prose-p:text-[#374151] prose-p:leading-[1.8] prose-p:font-light prose-p:text-lg
+                            prose-p:text-justify
+                            
+                            /* BAŞLIKLAR */
+                            prose-headings:text-[#111827] prose-headings:font-extrabold prose-headings:tracking-tight 
+                            prose-h3:text-2xl prose-h3:mt-14 prose-h3:mb-6 prose-h3:border-l-4 prose-h3:border-bek-gold prose-h3:pl-4
+                            
+                            /* DROP CAP */
+                            [&>p:first-of-type]:first-letter:text-[4.5rem] 
+                            [&>p:first-of-type]:first-letter:font-black [&>p:first-of-type]:first-letter:text-bek-gold 
+                            [&>p:first-of-type]:first-letter:float-left [&>p:first-of-type]:first-letter:mr-3.5 
+                            [&>p:first-of-type]:first-letter:mt-1.5 [&>p:first-of-type]:first-letter:leading-[0.8]
+                            
+                            /* PULL QUOTES */
+                            [&>blockquote>p]:before:content-none [&>blockquote>p]:after:content-none
+                            prose-blockquote:border-none prose-blockquote:text-xl md:prose-blockquote:text-2xl 
+                            prose-blockquote:text-[#111827] prose-blockquote:font-medium prose-blockquote:italic 
+                            prose-blockquote:text-center prose-blockquote:my-14 prose-blockquote:leading-relaxed
+                            prose-blockquote:relative prose-blockquote:py-8
+                            
+                            [&>blockquote]:before:content-[''] [&>blockquote]:before:absolute [&>blockquote]:before:w-12 [&>blockquote]:before:h-1 [&>blockquote]:before:bg-bek-gold [&>blockquote]:before:top-0 [&>blockquote]:before:left-1/2 [&>blockquote]:before:-translate-x-1/2
+                            [&>blockquote]:after:content-[''] [&>blockquote]:after:absolute [&>blockquote]:after:w-12 [&>blockquote]:after:h-1 [&>blockquote]:after:bg-bek-gold [&>blockquote]:after:bottom-0 [&>blockquote]:after:left-1/2 [&>blockquote]:after:-translate-x-1/2
+                            
+                            /* LİSTELER */
+                            prose-li:text-[#374151] prose-li:font-light marker:text-bek-gold
+                            prose-strong:text-[#111827] prose-strong:font-bold prose-strong:border-b-[1.5px] prose-strong:border-bek-gold/30
+                            prose-img:rounded-2xl prose-img:shadow-xl prose-img:my-10">
                     <slot />
                 </div>
+            </div>
+
+            <!-- SATIŞ MODÜLÜ -->
+            <div class="bg-[#0f1115] rounded-b-[2rem] rounded-t-xl mt-2 p-10 md:p-14 text-center relative overflow-hidden shadow-2xl border-t-4 border-bek-gold">
+                <div class="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMSIvPgo8cGF0aCBkPSJNMCAwTDggOFpNOCAwTDAgOFoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIvPjwvc3ZnPg==')]"></div>
                 
-                <!-- Otomatik Pazarlama/Satış Modülü -->
-                <div class="mt-12 pt-8 border-t border-gray-100 text-center bg-gray-50 -mx-6 md:-mx-10 -mb-6 md:-mb-10 p-8 md:p-10 rounded-b-2xl">
-                    <h3 class="text-xl font-bold text-bek-dark mb-3 tracking-tight">Eğitim Yolculuğunuzda Yanınızdayız</h3>
-                    <p class="text-gray-500 mb-6 font-light max-w-lg mx-auto leading-relaxed text-sm">Öğrencinize özel hazırlanan veri destekli VIP koçluk sistemimizle tanışmak için kurumumuza bekleriz.</p>
-                    <a href="/#iletisim" class="inline-flex items-center bg-bek-gold text-white px-6 py-3 rounded-full hover:bg-bek-dark hover:scale-105 transition-all duration-300 shadow-sm shadow-bek-gold/20 font-medium text-sm">
-                        Bize Ulaşın
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">VIP Eğitimle Tanışın</h3>
+                    <p class="text-gray-400 mb-8 font-light max-w-lg mx-auto leading-relaxed text-base">
+                        Çocuğunuzun potansiyelini keşfetmek ve veri destekli koçluk sistemimizle tanışmak için kurumumuza kahve içmeye bekleriz.
+                    </p>
+                    <a href="/#iletisim" class="group inline-flex items-center bg-gradient-to-r from-bek-gold to-yellow-600 text-white px-8 py-3 rounded-full font-semibold text-xs tracking-widest uppercase shadow-lg shadow-bek-gold/20 hover:shadow-bek-gold/40 transition-all duration-300 hover:scale-105">
+                        Bizimle İletişime Geçin
+                        <svg class="w-4 h-4 ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
-
             </div>
         </article>
     </main>
 </Layout>
+
+<style is:global>
+    /* Öğrenci Yol Haritası ve Veri Çizgileri Animasyonları */
+    .path-animate-1 {
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+        animation: drawPath 12s ease-in-out infinite alternate;
+    }
+    .path-animate-2 {
+        stroke-dasharray: 2500;
+        stroke-dashoffset: 2500;
+        animation: drawPath 18s ease-in-out infinite alternate-reverse;
+    }
+    .path-animate-3 {
+        stroke-dasharray: 1800;
+        stroke-dashoffset: 1800;
+        animation: drawPath 15s ease-in-out infinite alternate;
+    }
+
+    /* Veri Noktaları (Pulse efekti) */
+    .node-pulse-1 { animation: pulseNode 4s infinite; }
+    .node-pulse-2 { animation: pulseNode 3s infinite 1s; }
+    .node-pulse-3 { animation: pulseNode 5s infinite 2s; }
+
+    @keyframes drawPath {
+        0% { stroke-dashoffset: 2000; }
+        100% { stroke-dashoffset: 0; }
+    }
+    @keyframes pulseNode {
+        0%, 100% { transform: scale(1); opacity: 0.5; }
+        50% { transform: scale(1.5); opacity: 1; }
+    }
+</style>
