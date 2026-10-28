@@ -1,7 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-  site_domain: bek-akademi.netlify.app
+  identity_url: "https://bek-akademi.netlify.app/.netlify/identity"
+  gateway_url: "https://bek-akademi.netlify.app/.netlify/git"
 
 locale: 'tr'
 media_folder: "public/images/blog"
