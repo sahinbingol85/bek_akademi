@@ -1,8 +1,7 @@
 backend:
-  name: github
-  repo: sahinbingol85/bek_akademi
+  name: git-gateway
   branch: main
-  base_url: https://auth.bekegitimakademi.com
+  site_domain: bek-akademi.netlify.app
 
 locale: 'tr'
 media_folder: "public/images/blog"
