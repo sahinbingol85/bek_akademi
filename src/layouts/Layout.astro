@@ -27,7 +27,15 @@ const {
     <meta property="og:image" content="/images/logo.png" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.bekegitimakademi.com/" />
+    <!-- Netlify Identity (E-posta ile giriş için) -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.init({
+          APIUrl: "https://bek-akademi.netlify.app/.netlify/identity"
+        });
+      }
+    </script>
 </head>
 <body class="bg-bek-bg text-bek-dark font-sans antialiased">
     <slot />
